@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+.platform-wrapper {
+  background-color: white;
+  padding-bottom: 60px;
+}
+
+.main-canvas {
+  width: 100%;
+  max-width: 960px;
+
+  margin: 0 auto;
+
+  font-family: "Open Sans",Calibri,Arial,sans-serif;
+}
+
+[ui-tribes] .tribes-list {
+  margin-bottom: 30px;
+}
+
+.button.tribe-load-more {
+  border: none;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  background-color: rgb(244, 0, 0);
+}
