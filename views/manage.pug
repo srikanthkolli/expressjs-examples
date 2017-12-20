@@ -1,0 +1,38 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/static/css/styles.css')
+  body
+    h1= message
+    // register form
+    form(method='POST' action='/manage-employee')
+        div.form-group
+          label(for='first_name') First Name:
+          input#name.form-control(type='text', placeholder='first' name='first_name')
+
+        br
+
+        div.form-group
+          label(for='last_name') Last Name:
+          input#name.form-control(type='text', placeholder='last' name='last_name')
+
+        br
+
+        div.form-group
+          label(for='phone') Phone:
+          input#name.form-control(type='text', placeholder='phone' name='phone')
+
+        br
+
+        div.form-group
+          label(for='email') Email:
+          input#email.form-control(type='email', placeholder='name@email.com' name='email')
+
+        br
+
+        button.btn.btn-primary(type='submit') Sign up
+
+        br
+        br
+
+        a(href='/employee-list') Back to List

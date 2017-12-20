@@ -1,0 +1,40 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/static/css/styles.css')
+  body
+    h1= message
+    form(method='POST' action='/manage-employee')
+        
+        div.form-group
+          label(for='first_name') First Name:
+          input#first_name.form-control(type='text' placeholder='first' name='first_name' value=empData.first_name)
+        
+        br
+
+        div.form-group
+          label(for='last_name') Last Name:
+          input#last_name.form-control(type='text' placeholder='last' name='last_name' value=empData.last_name)
+
+        br
+
+        div.form-group
+          label(for='phone') Phone:
+          input#phone.form-control(type='text' placeholder='phone' name='phone' value=empData.phone)
+
+        br
+
+        div.form-group
+          label(for='email') Email:
+          input#email.form-control(type='email' placeholder='name@email.com' name='email' value=empData.email)
+
+        br
+
+        input(type='hidden' name='emp_id' value=empData.emp_id)
+
+        button.btn.btn-primary(type='submit') Update
+
+        br
+        br
+
+        a(href='/employee-list') Back To List

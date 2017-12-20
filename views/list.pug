@@ -1,0 +1,41 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/static/css/styles.css')
+  body
+    h1= message
+    - if (messages.info)
+        .message.info
+            span= messages.info
+    table
+        thead
+            tr
+                th Employee ID
+                th Firstname
+                th Lastname
+                th Phone
+                th Email
+                th CreatedDate
+                th Action
+        tbody
+            if(rows)
+                each items in results
+                    tr                    
+                        td #{items.emp_id}
+                        td #{items.first_name}
+                        td #{items.last_name}
+                        td #{items.phone}
+                        td #{items.email}
+                        td #{items.created_date}
+                        td 
+                            a(href='/manage-employee/' + items.emp_id)
+                                <img src="/static/images/pencil.png">
+                            a(href='/employee-list/' + items.emp_id)
+                                <img src="/static/images/delete.png">
+            else
+                tr
+                    td(colspan=7) #{results}
+            br
+            br
+            
+    a(href='/manage-employee') Add employee
