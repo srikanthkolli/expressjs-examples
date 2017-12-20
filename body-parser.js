@@ -13,9 +13,9 @@ app.get('/form', function(req, res){
 					<body>\
 						<form action="/form-post" method="post">\
 							<label>Email</label>\
-							<input type="text" name="email">\
+							<input type="text" name="user[email]">\
 							<label>Passowrd</label>\
-							<input type="password" name="password">\
+							<input type="password" name="user[password]">\
 							<button>Submit</button>\
 						</form>\
 					</body>\
